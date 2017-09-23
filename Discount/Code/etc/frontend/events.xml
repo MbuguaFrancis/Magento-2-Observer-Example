@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_product_add_after">
+        <observer name="customer_discount_price" instance="Discount\Code\Observer\DiscountPrice" />
+    </event>
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="code_customer_logout" instance="Discount\Code\Observer\CustomerLogout" />
+    </event>
+</config>
